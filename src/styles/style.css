@@ -105,6 +105,7 @@ h2 {
 .btn:hover {
     cursor: pointer;
     background-color: var(--secondary);
+    color: var(--primary);
 }
 
 .banner-btn {
@@ -142,14 +143,15 @@ h2 {
 
 .modal {
     display: grid;
-    padding: 14px;
-    grid-template-rows: repeat(4, 1fr);
-    gap: 12px;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 24px;
     background-color: var(--background);
     border-radius: 16px;
     width: 20vw;
-    max-width: 800px;
-    height: fit-content;
+    max-width: 900px;
+    max-height: fit-content;
     font-family: Merriweather, sans-serif;
 }
 

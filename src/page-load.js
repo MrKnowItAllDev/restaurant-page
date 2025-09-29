@@ -1,11 +1,9 @@
 'use strict';
 
 // Create the web page on page load
-
-
 export default function(parent) {
     // Create elements
-    const overlay = document.createElement("section");
+    const overlay = createOverlay();
     const container = document.createElement("section");
     const heading = document.createElement("h1");
     const paragraph = document.createElement("p");
@@ -16,18 +14,15 @@ export default function(parent) {
     const cBtn = document.createElement("button");
     const aBtn = document.createElement("button");
 
-
     // Add element classes
     btnSection.classList.add('btn-section');
     container.setAttribute('id', 'container');
-    overlay.classList.add("overlay");
     heading.style.color = '#ffffff';
     [hBtn, mBtn, cBtn, aBtn].forEach((btn) => {
         btn.classList.add('btn');
         btn.classList.add('banner-btn');
     });
     hBtn.classList.add('active');
-
     hBtn.classList.add('home');
     mBtn.classList.add('menu');
     cBtn.classList.add('contact');
@@ -49,10 +44,10 @@ export default function(parent) {
     });
     parent.appendChild(container);
 
-    return {
-        hBtn,
-        mBtn,
-        cBtn,
-        aBtn
-    };
 };
+
+export function createOverlay() {
+    const overlay = document.createElement("section");
+    overlay.classList.add("overlay");
+    return overlay;
+}

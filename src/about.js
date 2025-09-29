@@ -1,9 +1,12 @@
+import { createOverlay } from "./page-load";
+
 export default function(parent) {
 
     const modal = document.createElement("section");
     const header = document.createElement("section");
     const content = document.createElement("section");
     const paragraph = document.createElement("section");
+    const overlay = createOverlay();
 
     const h2 = document.createElement("h2");
     const headerContent = document.createElement("p");
@@ -34,5 +37,6 @@ export default function(parent) {
     modal.appendChild(paragraph);
     modal.appendChild(button);
 
+    parent.appendChild(overlay);
     parent.appendChild(modal);
 };

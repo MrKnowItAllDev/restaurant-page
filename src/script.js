@@ -2,6 +2,8 @@
 
 import loadHome from "./page-load";
 import loadAbout from "./about";
+import loadMenu from "./menu";
+
 import "./styles/style.css";
 import bground from "./assets/ethan-smith-3B_Vlmcd-dY-unsplash.jpg";
 
@@ -28,7 +30,6 @@ window.onload = (() => {
     const menuBtn = document.querySelector('.menu');
     const aboutBtn = document.querySelector('.about');
     const contactBtn = document.querySelector('.contact');
-    // const { hBtn, mBtn, cBtn, aBtn} = loadHome(parent);
 
     document.body.style.backgroundImage = `url('${bground}')`;
     document.body.style.backgroundAttachment = 'fixed';
@@ -41,7 +42,7 @@ window.onload = (() => {
     });
 
     menuBtn.addEventListener('click', (e) => {
-        callback(parent, clear, loadHome);
+        callback(parent, clear, loadMenu);
         toggleActive(e.target, homeBtn, aboutBtn);
     });
 
